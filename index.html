@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4th Convocation of SMUCT - Shanto-Mariam University of Creative Technology</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        convocation: {
+                            purple: '#6366f1',
+                            pink: '#ec4899',
+                            amber: '#f59e0b',
+                            teal: '#14b8a6',
+                            emerald: '#10b981',
+                            blue: '#3b82f6',
+                            indigo: '#4f46e5'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'gradient-x': 'gradient-x 8s ease infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-pink-500 selection:text-white">
+
+    <!-- Background Decorative Glows -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-72 sm:w-96 h-72 sm:h-96 bg-purple-400/20 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute top-1/3 -right-40 w-72 sm:w-96 h-72 sm:h-96 bg-pink-400/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-10 left-10 w-72 sm:w-96 h-72 sm:h-96 bg-cyan-400/20 rounded-full blur-3xl animate-float" style="animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-purple-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 sm:h-24">
+                
+                <!-- Logo & Title -->
+                <a href="#" class="flex items-center gap-2 sm:gap-4 group">
+                    <div class="relative flex items-center justify-center p-2.5 sm:p-3 rounded-2xl bg-gradient-to-tr from-indigo-900 via-purple-800 to-pink-600 shadow-lg group-hover:shadow-indigo-500/40 transition-all duration-300 group-hover:scale-105 shrink-0">
+                        <i class="fa-solid fa-graduation-cap text-yellow-300 text-2xl sm:text-4xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl sm:text-3xl md:text-4xl font-black font-serif tracking-tight bg-gradient-to-r from-indigo-950 via-purple-800 to-pink-600 bg-clip-text text-transparent group-hover:from-pink-600 group-hover:to-indigo-900 transition-all duration-500">
+                           <span class="font-light text-slate-700">Convocation</span>
+                        </span>
+                        <span class="text-[8px] sm:text-[11px] font-bold text-slate-500 tracking-wider uppercase mt-0.5 max-w-[200px] sm:max-w-none leading-tight">
+                            Shanto-Mariam University of Creative Technology
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Centered Desktop Navigation Links -->
+                <div class="hidden xl:flex items-center space-x-1.5 font-semibold text-xs lg:text-sm mx-auto">
+                    <a href="#" class="px-3 py-2 rounded-xl text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition whitespace-nowrap">Home</a>
+                    
+                   <!-- Convocation Dropdown -->
+<div class="relative group">
+    <button class="px-3 py-2 rounded-xl text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition flex items-center gap-1.5 whitespace-nowrap">
+        <span class="w-1.5 h-1.5 rounded-full bg-purple-500 shrink-0"></span> Convocations <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-70 group-hover:rotate-180 transition-transform"></i>
+    </button>
+    <div class="absolute left-0 top-full pt-1 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <div class="bg-white rounded-2xl shadow-2xl border border-slate-100 p-2">
+            <a href="#convocation-1st" class="block px-4 py-2.5 rounded-xl text-xs font-bold text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 transition">1<sup>st</sup> Convocation</a>
+            <a href="#convocation-2nd" class="block px-4 py-2.5 rounded-xl text-xs font-bold text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 transition">2<sup>nd</sup> Convocation</a>
+            <a href="#convocation-3rd" class="block px-4 py-2.5 rounded-xl text-xs font-bold text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 transition">3<sup>rd</sup> Convocation</a>
+        </div>
+    </div>
+</div>
+
+<!-- Photo Gallery Dropdown -->
+<div class="relative group">
+    <button class="px-3 py-2 rounded-xl text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition flex items-center gap-1.5 whitespace-nowrap">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span> Photo Gallery <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-70 group-hover:rotate-180 transition-transform"></i>
+    </button>
+    <div class="absolute left-0 top-full pt-1 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <div class="bg-white rounded-2xl shadow-2xl border border-slate-100 p-2">
+            <a href="#gallery-1st" class="block px-4 py-2.5 rounded-xl text-xs font-bold text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 transition">1<sup>st</sup> Convocation</a>
+            <a href="#gallery-2nd" class="block px-4 py-2.5 rounded-xl text-xs font-bold text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 transition">2<sup>nd</sup> Convocation</a>
+            <a href="#gallery-3rd" class="block px-4 py-2.5 rounded-xl text-xs font-bold text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 transition">3<sup>rd</sup> Convocation</a>
+        </div>
+    </div>
+</div>
+
+                    <a href="#notice" class="px-3 py-2 rounded-xl text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 transition flex items-center gap-1.5 whitespace-nowrap">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span> Notice
+                    </a>
+                                       
+                </div>
+
+                
+                    <!-- Mobile Menu Button -->
+                    <button id="menu-btn" class="xl:hidden p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 focus:outline-none transition">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Mobile Navigation Menu Dropdown -->
+            <div id="mobile-menu" class="hidden xl:hidden border-t border-slate-100 py-4 space-y-2 font-semibold text-sm">
+                <a href="#" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-600">Home</a>
+                
+                <!-- Mobile Dropdown: Convocation -->
+                <div class="px-4 py-1">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Convocations</span>
+                    <div class="pl-3 mt-1 space-y-1 border-l-2 border-indigo-100">
+                        <a href="#convocation-1st" class="mobile-nav-link block py-1.5 text-xs text-slate-600 hover:text-indigo-600">1st Convocation</a>
+                        <a href="#convocation-2nd" class="mobile-nav-link block py-1.5 text-xs text-slate-600 hover:text-indigo-600">2nd Convocation</a>
+                        <a href="#convocation-3rd" class="mobile-nav-link block py-1.5 text-xs text-slate-600 hover:text-indigo-600">3rd Convocation</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Dropdown: Photo Gallery -->
+                <div class="px-4 py-1">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Photo Gallery</span>
+                    <div class="pl-3 mt-1 space-y-1 border-l-2 border-indigo-100">
+                        <a href="#gallery-1st" class="mobile-nav-link block py-1.5 text-xs text-slate-600 hover:text-indigo-600">1st Convocation</a>
+                        <a href="#gallery-2nd" class="mobile-nav-link block py-1.5 text-xs text-slate-600 hover:text-indigo-600">2nd Convocation</a>
+                        <a href="#gallery-3rd" class="mobile-nav-link block py-1.5 text-xs text-slate-600 hover:text-indigo-600">3rd Convocation</a>
+                    </div>
+                </div>
+
+                <a href="#notice" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-600">Notice</a>
+                          
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative z-10">
+
+      <!-- Header / Hero Section -->
+<header class="relative bg-slate-900 text-white min-h-[480px] sm:min-h-[520px] flex flex-col justify-between overflow-hidden shadow-2xl">
+    <div class="absolute inset-0 z-0">
+        <img src="Convo_Pic_3.jpg" 
+             alt="SMUCT Convocation Ceremony" 
+             class="w-full h-full object-cover scale-105 transform hover:scale-100 transition duration-1000">
+        <div class="absolute inset-0 bg-black/50"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-24 sm:pb-28 w-full flex justify-center">
+        <div class="max-w-2xl w-full glass-panel-dark-transparent p-5 sm:p-8 rounded-3xl border border-white/20 shadow-2xl text-center flex flex-col items-center">
+            
+          <!-- UPCOMING Badge with Imperial Purple Core & Travelling Light Glow -->
+<div class="travelling-light-badge mb-4">
+    <div class="travelling-light-inner bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-950 text-white text-xs sm:text-sm font-black px-6 sm:px-7 py-2 sm:py-2.5 rounded-full uppercase tracking-wider flex items-center gap-2 border border-white/20">
+        <i class="fa-solid fa-sparkles text-amber-300 text-sm sm:text-base animate-pulse"></i> Upcoming
+    </div>
+</div>
+
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-tight">
+                <span class="bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 gradient-text">
+                    <span class="font-sans font-black">4</span><sup class="font-sans font-extrabold text-lg sm:text-2xl align-top relative -top-1 sm:-top-2">th</sup> <span class="font-serif">Convocation</span>
+                </span>
+            </h1>
+
+            <div class="flex flex-wrap justify-center items-center gap-4 text-xs sm:text-sm font-semibold text-slate-200 mb-6 sm:mb-8">
+                <span class="flex items-center bg-black/30 px-3.5 py-1.5 rounded-lg border border-white/10 backdrop-blur-md">
+                    <i class="fa-regular fa-calendar-check mr-2 text-amber-400"></i> 5 October 2026
+                </span>
+            </div>
+
+            <!-- Action Buttons (Reduced font size and padding) -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full sm:w-auto">
+                <a href="#register" class="w-full sm:w-auto bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 hover:from-pink-600 hover:to-indigo-700 text-white font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs transition-all duration-300 transform hover:scale-105 shadow-lg shadow-pink-500/30 flex items-center justify-center">
+                    Login to Register <i class="fa-solid fa-arrow-right-long ml-1.5 text-xs"></i>
+                </a>
+
+                <a href="#eligibility" class="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-extrabold px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs transition-all duration-300 transform hover:scale-105 shadow-lg shadow-teal-500/30 flex items-center justify-center">
+                    <i class="fa-solid fa-shield-check mr-1.5 text-yellow-300"></i> Check Eligibility
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <!-- Key Info Cards Floating Section -->
+        <section class="max-w-6xl mx-auto px-4 -mt-16 sm:-mt-20 relative z-20 mb-16 sm:mb-20">
+            <div class="glass-panel rounded-3xl p-5 sm:p-8 shadow-2xl border-2 border-purple-200/50">
+                <div class="text-center -mt-10 sm:-mt-14 mb-6 sm:mb-8">
+                    <div class="inline-block bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 text-white text-base sm:text-2xl font-black px-6 sm:px-10 py-2.5 sm:py-3 rounded-2xl shadow-xl border-2 sm:border-4 border-white transform hover:scale-105 transition-transform duration-300">
+                        <i class="fa-solid fa-graduation-cap mr-2 text-yellow-300"></i> 4<sup>th</sup> Convocation of SMUCT
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <div class="glow-card bg-gradient-to-br from-emerald-500 to-teal-700 p-6 rounded-2xl text-white shadow-lg flex flex-col justify-between">
+                        <div class="flex justify-between items-center border-b border-white/20 pb-3 mb-2">
+                            <h3 class="font-extrabold text-xs uppercase tracking-wider text-emerald-100">Registration Status</h3>
+                            <i class="fa-solid fa-bolt text-yellow-300 text-lg"></i>
+                        </div>
+                        <div class="my-2">
+                            <span class="inline-block bg-yellow-400 text-slate-950 font-black text-xl px-4 py-1 rounded-full shadow-md animate-pulse">OPEN</span>
+                        </div>
+                        <p class="text-xs text-emerald-50 font-medium leading-relaxed">Online registration is currently open for eligible graduates.</p>
+                    </div>
+
+                    <div class="glow-card bg-gradient-to-br from-indigo-600 to-purple-800 p-6 rounded-2xl text-white shadow-lg flex flex-col justify-between">
+                        <div class="flex justify-between items-center border-b border-white/20 pb-3 mb-2">
+                            <h3 class="font-extrabold text-xs uppercase tracking-wider text-indigo-100">Important Dates</h3>
+                            <i class="fa-solid fa-calendar-days text-pink-300 text-lg"></i>
+                        </div>
+                        <ul class="text-xs space-y-1.5 text-indigo-100">
+                            <li><strong class="text-white">Starts:</strong> 15 Sept 2026</li>
+                            <li><strong class="text-white">Ends:</strong> 30 Sept 2026</li>
+                        </ul>
+                        <div class="mt-2 pt-2 border-t border-white/10 text-xs">
+                            <strong class="text-yellow-300 font-bold block">Convocation Date:</strong>
+                            <span class="font-black text-sm">5 October 2026</span>
+                        </div>
+                    </div>
+
+                    <div class="glow-card bg-gradient-to-br from-amber-500 to-orange-600 p-6 rounded-2xl text-white shadow-lg flex flex-col justify-between">
+                        <div class="flex justify-between items-center border-b border-white/20 pb-3 mb-2">
+                            <h3 class="font-extrabold text-xs uppercase tracking-wider text-amber-100">Registration Fee</h3>
+                            <i class="fa-solid fa-wallet text-yellow-200 text-lg"></i>
+                        </div>
+                        <div class="my-2">
+                            <p class="text-2xl font-black text-white">BDT 12,000+</p>
+                        </div>
+                        <p class="text-xs text-amber-50 leading-relaxed">Full breakdown shown after sign-in.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Required Documents & Information Section -->
+        <section id="eligibility" class="max-w-6xl mx-auto px-4 mb-16 sm:mb-20">
+            <div class="text-center mb-8 sm:mb-10">
+                <span class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-extrabold text-sm sm:text-lg px-6 sm:px-8 py-2.5 rounded-full shadow-lg border border-white/40 uppercase tracking-wide">
+                    <i class="fa-solid fa-folder-check text-yellow-300"></i> Required Documents & Info
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glow-card bg-white rounded-3xl p-5 sm:p-6 shadow-xl border-2 border-blue-100 relative overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 border-b-2 border-blue-500/20 pb-4 mb-5">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-500 text-white flex items-center justify-center text-lg sm:text-xl shadow-md shrink-0">
+                                <i class="fa-solid fa-id-card"></i>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-extrabold text-slate-800">Student & Personal Info</h3>
+                        </div>
+
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-600">
+                            <li class="flex items-start gap-3 bg-blue-50/50 p-2.5 rounded-xl border border-blue-100">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-base mt-0.5"></i>
+                                <span><strong class="text-slate-800">Verified Student ID</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-blue-50/50 p-2.5 rounded-xl border border-blue-100">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-base mt-0.5"></i>
+                                <span>Active Mobile & Email</span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-blue-50/50 p-2.5 rounded-xl border border-blue-100">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-base mt-0.5"></i>
+                                <span>Present Address</span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-blue-50/50 p-2.5 rounded-xl border border-blue-100">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-base mt-0.5"></i>
+                                <span>Emergency Contact Info</span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-blue-50/50 p-2.5 rounded-xl border border-blue-100">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-base mt-0.5"></i>
+                                <span>Blood Group</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="glow-card bg-white rounded-3xl p-5 sm:p-6 shadow-xl border-2 border-purple-100 relative overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 border-b-2 border-purple-500/20 pb-4 mb-5">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-tr from-purple-600 to-pink-500 text-white flex items-center justify-center text-lg sm:text-xl shadow-md shrink-0">
+                                <i class="fa-solid fa-file-arrow-up"></i>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-extrabold text-slate-800">Photo & Documents</h3>
+                        </div>
+
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-600">
+                            <li class="flex items-start gap-3 bg-purple-50/50 p-2.5 rounded-xl border border-purple-100">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-base mt-0.5"></i>
+                                <span><strong class="text-slate-800">Student Photo:</strong> Passport-size (3:4 ratio), max 2MB</span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-purple-50/50 p-2.5 rounded-xl border border-purple-100">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-base mt-0.5"></i>
+                                <span><strong class="text-slate-800">Signature:</strong> Wide (3:1 ratio), max 2MB</span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-purple-50/50 p-2.5 rounded-xl border border-purple-100">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-base mt-0.5"></i>
+                                <span><strong class="text-slate-800">Payment Receipt:</strong> Image or PDF, max 5MB</span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-purple-50/50 p-2.5 rounded-xl border border-purple-100">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-base mt-0.5"></i>
+                                <span><strong class="text-slate-800">Certificates:</strong> SSC, HSC (max 5MB)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="glow-card bg-white rounded-3xl p-5 sm:p-6 shadow-xl border-2 border-emerald-100 relative overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 border-b-2 border-emerald-500/20 pb-4 mb-5">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-500 text-white flex items-center justify-center text-lg sm:text-xl shadow-md shrink-0">
+                                <i class="fa-solid fa-box-open"></i>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-extrabold text-slate-800">Package & Guest Info</h3>
+                        </div>
+
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-600">
+                            <li class="flex items-start gap-3 bg-emerald-50/50 p-2.5 rounded-xl border border-emerald-100">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-base mt-0.5"></i>
+                                <span><strong>Gown Selection</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-emerald-50/50 p-2.5 rounded-xl border border-emerald-100">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-base mt-0.5"></i>
+                                <span><strong>Guest Info</strong> (Up to 2 guests allowed)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Workflow Steps Section -->
+        <section id="workflow" class="max-w-7xl mx-auto px-4 mb-16 sm:mb-20">
+            <div class="text-center mb-8 sm:mb-10">
+                <span class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 text-white font-extrabold text-sm sm:text-lg px-6 sm:px-8 py-2.5 rounded-full shadow-lg border border-white/40 uppercase tracking-wide">
+                    <i class="fa-solid fa-list-check text-yellow-200"></i> Registration Workflow Guide
+                </span>
+            </div>
+
+            <!-- Scrollable container for mobile screen -->
+            <div class="overflow-x-auto workflow-scroll pb-4 -mx-4 px-4 sm:mx-0 sm:px-0">
+                <div class="flex sm:grid sm:grid-cols-5 md:grid-cols-10 gap-3 min-w-[850px] sm:min-w-0">
+                    
+                    <div class="glow-card min-w-[130px] sm:min-w-0 bg-gradient-to-b from-blue-600 to-indigo-700 p-3.5 rounded-2xl text-white text-center flex flex-col justify-between h-44 shadow-lg border border-white/20">
+                        <div class="bg-white/20 rounded-xl py-1 text-[10px] font-black uppercase">Step 01</div>
+                        <div class="my-1">
+                            <i class="fa-solid fa-right-to-bracket text-xl text-yellow-300 mb-1"></i>
+                            <div class="font-bold text-xs mb-0.5">Eligibility</div>
+                            <p class="text-[10px] leading-tight text-blue-100">Sign in with student ID</p>
+                        </div>
+                    </div>
+
+                    <div class="glow-card min-w-[130px] sm:min-w-0 bg-gradient-to-b from-indigo-600 to-purple-700 p-3.5 rounded-2xl text-white text-center flex flex-col justify-between h-44 shadow-lg border border-white/20">
+                        <div class="bg-white/20 rounded-xl py-1 text-[10px] font-black uppercase">Step 02</div>
+                        <div class="my-1">
+                            <i class="fa-solid fa-user-pen text-xl text-pink-300 mb-1"></i>
+                            <div class="font-bold text-xs mb-0.5">Profile</div>
+                            <p class="text-[10px] leading-tight text-indigo-100">Add personal info</p>
+                        </div>
+                    </div>
+
+                    <div class="glow-card min-w-[130px] sm:min-w-0 bg-gradient-to-b from-purple-600 to-pink-600 p-3.5 rounded-2xl text-white text-center flex flex-col justify-between h-44 shadow-lg border border-white/20">
+                        <div class="bg-white/20 rounded-xl py-1 text-[10px] font-black uppercase">Step 03</div>
+                        <div class="my-1">
+                            <i class="fa-solid fa-camera-retro text-xl text-yellow-300 mb-1"></i>
+                            <div class="font-bold text-xs mb-0.5">Photo</div>
+                            <p class="text-[10px] leading-tight text-purple-100">Upload recent photo</p>
+                        </div>
+                    </div>
+
+                    <div class="glow-card min-w-[130px] sm:min-w-0 bg-gradient-to-b from-pink-600 to-rose-600 p-3.5 rounded-2xl text-white text-center flex flex-col justify-between h-44 shadow-lg border border-white/20">
+                        <div class="bg-white/20 rounded-xl py-1 text-[10px] font-black uppercase">Step 04</div>
+                        <div class="my-1">
+                            <i class="fa-solid fa-signature text-xl text-cyan-300 mb-1"></i>
+                            <div class="font-bold text-xs mb-0.5">Signature</div>
+                            <p class="text-[10px] leading-tight text-pink-100">Upload signature</p>
+                        </div>
+                    </div>
+
+                    <div class="glow-card min-w-[130px] sm:min-w-0 bg-gradient-to-b from-rose-600 to-orange-600 p-3.5 rounded-2xl text-white text-center flex flex-col justify-between h-44 shadow-lg border border-white/20">
+                        <div class="bg-white/20 rounded-xl py-1 text-[10px] font-black uppercase">Step 05</div>
+                        <div class="my-1">
+                            <i class="fa-solid fa-users text-xl text-yellow-300 mb-1"></i>
+                            <div class="font-bold text-xs mb-0.5">Guest</div>
+                            <p class="text-[10px] leading-tight text-rose-100">Add details (max 2)</p>
+                        </div>
+                    </div>
+
+                    <div class="glow-card min-w-[130px] sm:min-w-0 bg-gradient-to-b from-orange-500 to-amber-600 p-3.5 rounded-2xl text-white text-center flex flex-col justify-between h-44 shadow-lg border border-white/20">
+                        <div class="bg-white/20 rounded-xl py-1 text-[10px] font-black uppercase">Step 06</div>
+                        <div class="my-1">
+                            <i class="fa-solid fa-file-circle-check text-xl text-yellow-300 mb-1"></i>
+                            <div class="font-bold text-xs mb-0.5">Review</div>
+                            <p class="text-[10px] leading-tight text-amber-100">Review & confirm</p>
+                        </div>
+                    </div>
+
+                    <div class="glow-card min-w-[130px] sm:min-w-0 bg-gradient-to-b from-emerald-600 to-teal-700 p-3.5 rounded-2xl text-white text-center flex flex-col justify-between h-44 shadow-lg border border-white/20">
+                        <div class="bg-white/20 rounded-xl py-1 text-[10px] font-black uppercase">Step 07</div>
+                        <div class="my-1">
+                            <i class="fa-solid fa-file-contract text-xl text-yellow-300 mb-1"></i>
+                            <div class="font-bold text-xs mb-0.5">Confirm</div>
+                            <p class="text-[10px] leading-tight text-emerald-100">Read terms</p>
+                        </div>
+                    </div>
+
+                    <div class="glow-card min-w-[130px] sm:min-w-0 bg-gradient-to-b from-teal-600 to-cyan-700 p-3.5 rounded-2xl text-white text-center flex flex-col justify-between h-44 shadow-lg border border-white/20">
+                        <div class="bg-white/20 rounded-xl py-1 text-[10px] font-black uppercase">Step 08</div>
+                        <div class="my-1">
+                            <i class="fa-solid fa-receipt text-xl text-pink-300 mb-1"></i>
+                            <div class="font-bold text-xs mb-0.5">Payment</div>
+                            <p class="text-[10px] leading-tight text-teal-100">Upload receipt</p>
+                        </div>
+                    </div>
+
+                    <div class="glow-card min-w-[130px] sm:min-w-0 bg-gradient-to-b from-cyan-600 to-blue-700 p-3.5 rounded-2xl text-white text-center flex flex-col justify-between h-44 shadow-lg border border-white/20">
+                        <div class="bg-white/20 rounded-xl py-1 text-[10px] font-black uppercase">Step 09</div>
+                        <div class="my-1">
+                            <i class="fa-solid fa-cloud-arrow-up text-xl text-yellow-300 mb-1"></i>
+                            <div class="font-bold text-xs mb-0.5">Documents</div>
+                            <p class="text-[9px] leading-tight text-cyan-100">SSC, HSC, NID</p>
+                        </div>
+                    </div>
+
+                    <div class="glow-card min-w-[130px] sm:min-w-0 bg-gradient-to-b from-violet-600 to-fuchsia-700 p-3.5 rounded-2xl text-white text-center flex flex-col justify-between h-44 shadow-lg border border-white/20">
+                        <div class="bg-white/20 rounded-xl py-1 text-[10px] font-black uppercase">Step 10</div>
+                        <div class="my-1">
+                            <i class="fa-solid fa-ticket text-xl text-emerald-300 mb-1"></i>
+                            <div class="font-bold text-xs mb-0.5">Gate Pass</div>
+                            <p class="text-[10px] leading-tight text-violet-100">Collect pass</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Convocation Fee Structure Section -->
+        <section id="fees" class="max-w-6xl mx-auto px-4 mb-16 sm:mb-20">
+            <div class="text-center mb-8 sm:mb-10">
+                <span class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 via-teal-600 to-cyan-600 text-white font-extrabold text-sm sm:text-lg px-6 sm:px-8 py-2.5 rounded-full shadow-lg border border-white/40 uppercase tracking-wide">
+                    <i class="fa-solid fa-money-bill-wave text-yellow-300"></i> Fee Structure
+                </span>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[550px]">
+                        <thead>
+                            <tr class="bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-900 text-white uppercase text-[11px] sm:text-xs font-black tracking-wider">
+                                <th class="p-4 sm:p-5 text-center w-14 sm:w-20 border-r border-white/10">SL</th>
+                                <th class="p-4 sm:p-5 border-r border-white/10">Registration Category & Details</th>
+                                <th class="p-4 sm:p-5 text-center w-36 sm:w-52">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-xs sm:text-sm font-sans">
+                            <tr class="hover:bg-purple-50/60 transition duration-200">
+                                <td class="p-3 sm:p-5 text-center font-bold text-slate-400 bg-slate-50/50">01</td>
+                                <td class="p-3 sm:p-5">
+                                    <div class="font-extrabold text-slate-800 text-sm sm:text-base mb-1 flex items-center gap-2">
+                                        <i class="fa-solid fa-user-graduate text-purple-600"></i> Bachelor’s Degree
+                                    </div>
+                                    <p class="text-[11px] sm:text-xs text-slate-500 leading-relaxed">
+                                        Registration Fee, Gown Deposit, Dinner Fee, Guest Fee x 1, Souvenir Fee
+                                    </p>
+                                </td>
+                                <td class="p-3 sm:p-5 text-center">
+                                    <span class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-black px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-base shadow-md whitespace-nowrap">
+                                        BDT 12,000
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-pink-50/60 transition duration-200">
+                                <td class="p-3 sm:p-5 text-center font-bold text-slate-400 bg-slate-50/50">02</td>
+                                <td class="p-3 sm:p-5">
+                                    <div class="font-extrabold text-slate-800 text-sm sm:text-base mb-1 flex items-center gap-2">
+                                        <i class="fa-solid fa-graduation-cap text-pink-600"></i> Master’s Degree
+                                    </div>
+                                    <p class="text-[11px] sm:text-xs text-slate-500 leading-relaxed">
+                                        Registration Fee, Gown Deposit, Dinner Fee, Guest Fee x 1, Souvenir Fee
+                                    </p>
+                                </td>
+                                <td class="p-3 sm:p-5 text-center">
+                                    <span class="inline-block bg-gradient-to-r from-pink-600 to-rose-600 text-white font-black px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-base shadow-md whitespace-nowrap">
+                                        BDT 13,000
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-amber-50/60 transition duration-200">
+                                <td class="p-3 sm:p-5 text-center font-bold text-slate-400 bg-slate-50/50">03</td>
+                                <td class="p-3 sm:p-5">
+                                    <div class="font-extrabold text-slate-800 text-sm sm:text-base mb-1 flex items-center gap-2">
+                                        <i class="fa-solid fa-award text-amber-500"></i> Both Degrees
+                                    </div>
+                                    <p class="text-[11px] sm:text-xs text-slate-500 leading-relaxed">
+                                        Registration Fee, Gown Deposit, Dinner Fee, Guest Fee x 1, Souvenir Fee
+                                    </p>
+                                </td>
+                                <td class="p-3 sm:p-5 text-center">
+                                    <span class="inline-block bg-gradient-to-r from-amber-500 to-orange-600 text-white font-black px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-base shadow-md whitespace-nowrap">
+                                        BDT 19,000
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notice Section -->
+        <section id="notice" class="max-w-6xl mx-auto px-4 mb-16 sm:mb-20">
+            <div class="text-center mb-6 sm:mb-8">
+                <span class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 text-white font-extrabold text-sm sm:text-lg px-6 sm:px-8 py-2.5 rounded-full shadow-lg border border-white/40 uppercase tracking-wide">
+                    <i class="fa-solid fa-bullhorn text-yellow-200"></i> Official Notice
+                </span>
+            </div>
+
+            <div class="bg-gradient-to-r from-slate-900 via-purple-950 to-indigo-950 p-6 sm:p-8 rounded-3xl text-white shadow-2xl border border-purple-500/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2 text-amber-400 font-bold text-xs uppercase tracking-wider">
+                        <i class="fa-solid fa-circle-exclamation"></i> Important Announcement
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-black font-serif">4th Convocation Deadline Extended</h3>
+                    <p class="text-xs text-slate-300 max-w-2xl leading-relaxed">
+                        All graduating students are advised to complete their online profile and upload payment receipts before the deadline. Late submissions will not be processed.
+                    </p>
+                </div>
+                <a href="#" class="w-full sm:w-auto text-center whitespace-nowrap bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-6 py-3 rounded-xl text-xs sm:text-sm transition duration-300 shadow-lg flex items-center justify-center gap-2 shrink-0">
+                    <i class="fa-solid fa-file-pdf"></i> Download PDF
+                </a>
+            </div>
+        </section>
+
+        <!-- Messages Section -->
+        <section id="messages" class="max-w-6xl mx-auto px-4 mb-16 sm:mb-20">
+            <div class="text-center mb-8 sm:mb-10">
+                <span class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 text-white font-extrabold text-sm sm:text-lg px-6 sm:px-8 py-2.5 rounded-full shadow-lg border border-white/40 uppercase tracking-wide">
+                    <i class="fa-solid fa-quote-left text-yellow-300"></i> Messages from Dignitaries
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Chancellor Message -->
+                <div class="glow-card bg-white rounded-3xl p-6 shadow-xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="Chancellor" class="w-16 h-16 rounded-2xl object-cover shadow-md border-2 border-purple-500">
+                            <div>
+                                <h3 class="text-base font-extrabold text-slate-900">Honorable Chancellor</h3>
+                                <p class="text-xs font-semibold text-purple-600">President of Bangladesh</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-600 italic leading-relaxed mb-4">
+                            "Education is the bedrock of societal advancement. I extend my heartiest congratulations to all graduates of SMUCT on this historic convocation ceremony."
+                        </p>
+                    </div>
+                    <a href="#" class="text-xs font-extrabold text-purple-600 hover:text-purple-800 flex items-center gap-1">Read Full Message <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Vice Chancellor Message -->
+                <div class="glow-card bg-white rounded-3xl p-6 shadow-xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Vice Chancellor" class="w-16 h-16 rounded-2xl object-cover shadow-md border-2 border-pink-500">
+                            <div>
+                                <h3 class="text-base font-extrabold text-slate-900">Prof. Dr. Vice Chancellor</h3>
+                                <p class="text-xs font-semibold text-pink-600">Vice Chancellor, SMUCT</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-600 italic leading-relaxed mb-4">
+                            "Our commitment to creative technology and academic excellence shines through our graduating batch today. Go forth and make a meaningful impact."
+                        </p>
+                    </div>
+                    <a href="#" class="text-xs font-extrabold text-pink-600 hover:text-pink-800 flex items-center gap-1">Read Full Message <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Chairman Message -->
+                <div class="glow-card bg-white rounded-3xl p-6 shadow-xl border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="Founder Chairman" class="w-16 h-16 rounded-2xl object-cover shadow-md border-2 border-indigo-500">
+                            <div>
+                                <h3 class="text-base font-extrabold text-slate-900">Board of Trustees Chairman</h3>
+                                <p class="text-xs font-semibold text-indigo-600">Founder Chairman, SMUCT</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-600 italic leading-relaxed mb-4">
+                            "May your journey beyond this university be filled with creative accomplishments, innovation, and unwavering devotion to serving our nation."
+                        </p>
+                    </div>
+                    <a href="#" class="text-xs font-extrabold text-indigo-600 hover:text-indigo-800 flex items-center gap-1">Read Full Message <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medalists & Awardees Section -->
+        <section id="medalist" class="max-w-6xl mx-auto px-4 mb-16 sm:mb-20">
+            <div class="text-center mb-8 sm:mb-10">
+                <span class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 text-slate-950 font-extrabold text-sm sm:text-lg px-6 sm:px-8 py-2.5 rounded-full shadow-lg border border-white/40 uppercase tracking-wide">
+                    <i class="fa-solid fa-award text-yellow-900"></i> Medalists & Honored Graduates
+                </span>
+            </div>
+
+            <!-- Award Category Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8">
+                <button class="medalist-tab active-tab bg-indigo-600 text-white font-extrabold text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl shadow-md transition">Founder Chairman’s Scholarships</button>
+                <button class="medalist-tab bg-white text-slate-700 hover:bg-indigo-50 font-extrabold text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl shadow-md transition border border-slate-200">Vice Chancellor’s Awards</button>
+                <button class="medalist-tab bg-white text-slate-700 hover:bg-indigo-50 font-extrabold text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl shadow-md transition border border-slate-200">Dean’s List Awards</button>
+                <button class="medalist-tab bg-white text-slate-700 hover:bg-indigo-50 font-extrabold text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl shadow-md transition border border-slate-200">External Source Scholarships</button>
+            </div>
+
+            <!-- Student Awardee Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Student Card 1 -->
+                <div class="glow-card bg-white rounded-3xl p-5 shadow-xl border border-slate-100 text-center flex flex-col items-center">
+                    <div class="relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=250&auto=format&fit=crop" alt="Student" class="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-amber-400">
+                        <span class="absolute bottom-0 right-0 bg-amber-400 text-slate-900 w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shadow-md">
+                            <i class="fa-solid fa-medal"></i>
+                        </span>
+                    </div>
+                    <h4 class="text-base font-extrabold text-slate-900 mb-0.5">Tanvir Ahmed</h4>
+                    <p class="text-xs font-bold text-indigo-600 mb-2">Computer Science & Engineering</p>
+                    <span class="inline-block bg-amber-100 text-amber-800 text-[10px] font-extrabold px-3 py-1 rounded-full border border-amber-300">
+                        ID: 211071007
+                    </span>
+                </div>
+
+                <!-- Student Card 2 -->
+                <div class="glow-card bg-white rounded-3xl p-5 shadow-xl border border-slate-100 text-center flex flex-col items-center">
+                    <div class="relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=250&auto=format&fit=crop" alt="Student" class="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-amber-400">
+                        <span class="absolute bottom-0 right-0 bg-amber-400 text-slate-900 w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shadow-md">
+                            <i class="fa-solid fa-medal"></i>
+                        </span>
+                    </div>
+                    <h4 class="text-base font-extrabold text-slate-900 mb-0.5">Nusrat Jahan</h4>
+                    <p class="text-xs font-bold text-pink-600 mb-2">Fashion Design & Technology</p>
+                    <span class="inline-block bg-amber-100 text-amber-800 text-[10px] font-extrabold px-3 py-1 rounded-full border border-amber-300">
+                        ID: 211071008
+                    </span>
+                </div>
+
+                <!-- Student Card 3 -->
+                <div class="glow-card bg-white rounded-3xl p-5 shadow-xl border border-slate-100 text-center flex flex-col items-center">
+                    <div class="relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=250&auto=format&fit=crop" alt="Student" class="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-amber-400">
+                        <span class="absolute bottom-0 right-0 bg-amber-400 text-slate-900 w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shadow-md">
+                            <i class="fa-solid fa-medal"></i>
+                        </span>
+                    </div>
+                    <h4 class="text-base font-extrabold text-slate-900 mb-0.5">Arafat Rahman</h4>
+                    <p class="text-xs font-bold text-purple-600 mb-2">Graphic Design & Multimedia</p>
+                    <span class="inline-block bg-amber-100 text-amber-800 text-[10px] font-extrabold px-3 py-1 rounded-full border border-amber-300">
+                         ID: 211071009
+                    </span>
+                </div>
+
+                <!-- Student Card 4 -->
+                <div class="glow-card bg-white rounded-3xl p-5 shadow-xl border border-slate-100 text-center flex flex-col items-center">
+                    <div class="relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=250&auto=format&fit=crop" alt="Student" class="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-amber-400">
+                        <span class="absolute bottom-0 right-0 bg-amber-400 text-slate-900 w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shadow-md">
+                            <i class="fa-solid fa-medal"></i>
+                        </span>
+                    </div>
+                    <h4 class="text-base font-extrabold text-slate-900 mb-0.5">Mehnaz Chowdhury</h4>
+                    <p class="text-xs font-bold text-emerald-600 mb-2">Business Administration</p>
+                    <span class="inline-block bg-amber-100 text-amber-800 text-[10px] font-extrabold px-3 py-1 rounded-full border border-amber-300">
+                         ID: 211071010
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Convocations & Photo Gallery Section -->
+        <section id="convocation-1st" class="max-w-6xl mx-auto px-4 mb-16 sm:mb-20">
+            <div class="text-center mb-8 sm:mb-10">
+                <span class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white font-extrabold text-sm sm:text-lg px-6 sm:px-8 py-2.5 rounded-full shadow-lg border border-white/40 uppercase tracking-wide">
+                    <i class="fa-solid fa-images text-yellow-300"></i> All Convocations Gallery
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <!-- 1st Convocation -->
+                <div id="gallery-1st" class="glow-card bg-white rounded-3xl p-4 sm:p-5 shadow-xl border border-slate-100 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-full h-44 sm:h-52 mb-4 sm:mb-5 overflow-hidden rounded-2xl relative shadow-inner">
+                            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=600&auto=format&fit=crop" 
+                                 alt="1st Convocation" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                                 onerror="this.src='https://placehold.co/400x250/6366f1/ffffff?text=1st+Convocation'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60"></div>
+                            
+                            <span class="absolute bottom-3 left-3 bg-blue-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg shadow">
+                                23-4-2014
+                            </span>
+
+                            <span class="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur-md text-yellow-300 border border-yellow-400/30 text-[11px] font-extrabold px-2.5 py-1 rounded-lg shadow flex items-center gap-1.5">
+                                <i class="fa-solid fa-user-graduate"></i> 5,503
+                            </span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-black text-slate-800 text-center mb-3 sm:mb-4 font-serif">1<sup>st</sup> Convocation</h3>
+                    </div>
+                    <a href="#" class="w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold py-2.5 sm:py-3 rounded-xl shadow-md transition duration-300 text-xs sm:text-sm flex items-center justify-center gap-2">
+                        Learn More <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- 2nd Convocation -->
+                <div id="convocation-2nd" class="glow-card bg-white rounded-3xl p-4 sm:p-5 shadow-xl border border-slate-100 flex flex-col justify-between group">
+                    <div id="gallery-2nd">
+                        <div class="w-full h-44 sm:h-52 mb-4 sm:mb-5 overflow-hidden rounded-2xl relative shadow-inner">
+                            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=600&auto=format&fit=crop" 
+                                 alt="2nd Convocation" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                                 onerror="this.src='https://placehold.co/400x250/ec4899/ffffff?text=2nd+Convocation'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60"></div>
+                            
+                            <span class="absolute bottom-3 left-3 bg-purple-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg shadow">
+                                27-11-2017
+                            </span>
+
+                            <span class="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur-md text-yellow-300 border border-yellow-400/30 text-[11px] font-extrabold px-2.5 py-1 rounded-lg shadow flex items-center gap-1.5">
+                                <i class="fa-solid fa-user-graduate"></i> 4,665
+                            </span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-black text-slate-800 text-center mb-3 sm:mb-4 font-serif">2<sup>nd</sup> Convocation</h3>
+                    </div>
+                    <a href="#" class="w-full text-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-2.5 sm:py-3 rounded-xl shadow-md transition duration-300 text-xs sm:text-sm flex items-center justify-center gap-2">
+                        Learn More <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- 3rd Convocation -->
+                <div id="convocation-3rd" class="glow-card bg-white rounded-3xl p-4 sm:p-5 shadow-xl border border-slate-100 flex flex-col justify-between group">
+                    <div id="gallery-3rd">
+                        <div class="w-full h-44 sm:h-52 mb-4 sm:mb-5 overflow-hidden rounded-2xl relative shadow-inner">
+                            <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=600&auto=format&fit=crop" 
+                                 alt="3rd Convocation" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                                 onerror="this.src='https://placehold.co/400x250/10b981/ffffff?text=3rd+Convocation'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60"></div>
+                            
+                            <span class="absolute bottom-3 left-3 bg-emerald-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg shadow">
+                               13-11-2023
+                            </span>
+
+                            <span class="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur-md text-yellow-300 border border-yellow-400/30 text-[11px] font-extrabold px-2.5 py-1 rounded-lg shadow flex items-center gap-1.5">
+                                <i class="fa-solid fa-user-graduate"></i> 6,226
+                            </span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-black text-slate-800 text-center mb-3 sm:mb-4 font-serif">3<sup>rd</sup> Convocation</h3>
+                    </div>
+                    <a href="#" class="w-full text-center bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold py-2.5 sm:py-3 rounded-xl shadow-md transition duration-300 text-xs sm:text-sm flex items-center justify-center gap-2">
+                        Learn More <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="max-w-3xl mx-auto px-4 mb-16 sm:mb-20">
+            <div class="text-center mb-6">
+                <span class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-indigo-600">FAQ</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 font-serif mt-1 mb-2">Frequently asked questions</h2>
+                <p class="text-slate-500 text-xs sm:text-sm">Can't find what you're looking for? Contact your Registrar's Office.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-4 sm:p-6 shadow-xl border border-slate-100 divide-y divide-slate-100">
+                <details class="group py-3.5 cursor-pointer">
+                    <summary class="flex items-center justify-between font-semibold text-slate-800 text-xs sm:text-base list-none">
+                        <span class="flex items-center gap-2.5">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            Who is eligible to register?
+                        </span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform duration-300 ml-2"></i>
+                    </summary>
+                    <p class="mt-3 pl-4 sm:pl-5 text-xs sm:text-sm text-slate-500 leading-relaxed">
+                        Graduates who have completed all required credits for Bachelor’s or Master’s programs by the stipulated deadline and received official approval from the controller of examinations are eligible to register.
+                    </p>
+                </details>
+
+                <details class="group py-3.5 cursor-pointer">
+                    <summary class="flex items-center justify-between font-semibold text-slate-800 text-xs sm:text-base list-none">
+                        <span class="flex items-center gap-2.5">
+                            <span class="w-2 h-2 rounded-full bg-blue-500 shrink-0"></span>
+                            What if my name isn't on the eligible list?
+                        </span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform duration-300 ml-2"></i>
+                    </summary>
+                    <p class="mt-3 pl-4 sm:pl-5 text-xs sm:text-sm text-slate-500 leading-relaxed">
+                        If your name or ID is not appearing on the eligible list, please get in touch with the Registrar’s Office or the academic department with your provisional certificate or transcript copy.
+                    </p>
+                </details>
+
+                <details class="group py-3.5 cursor-pointer">
+                    <summary class="flex items-center justify-between font-semibold text-slate-800 text-xs sm:text-base list-none">
+                        <span class="flex items-center gap-2.5">
+                            <span class="w-2 h-2 rounded-full bg-teal-500 shrink-0"></span>
+                            What payment methods are accepted?
+                        </span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform duration-300 ml-2"></i>
+                    </summary>
+                    <p class="mt-3 pl-4 sm:pl-5 text-xs sm:text-sm text-slate-500 leading-relaxed">
+                        We accept mobile financial services (bKash, Nagad, Rocket), online banking portals, and bank slip uploads depending on the specified payment options inside the portal.
+                    </p>
+                </details>
+
+                <details class="group py-3.5 cursor-pointer">
+                    <summary class="flex items-center justify-between font-semibold text-slate-800 text-xs sm:text-base list-none">
+                        <span class="flex items-center gap-2.5">
+                            <span class="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
+                            How do I get my entry pass?
+                        </span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform duration-300 ml-2"></i>
+                    </summary>
+                    <p class="mt-3 pl-4 sm:pl-5 text-xs sm:text-sm text-slate-500 leading-relaxed">
+                        Once your submitted documents and payment verification are approved, the Gate Pass will be available for download under your portal dashboard.
+                    </p>
+                </details>
+
+                <details class="group py-3.5 cursor-pointer">
+                    <summary class="flex items-center justify-between font-semibold text-slate-800 text-xs sm:text-base list-none">
+                        <span class="flex items-center gap-2.5">
+                            <span class="w-2 h-2 rounded-full bg-rose-500 shrink-0"></span>
+                            Can I bring guests?
+                        </span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform duration-300 ml-2"></i>
+                    </summary>
+                    <p class="mt-3 pl-4 sm:pl-5 text-xs sm:text-sm text-slate-500 leading-relaxed">
+                        Yes, each graduate can register up to a maximum of 2 guests during the online registration process.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- Final Call to Action Banner -->
+        <section class="max-w-4xl mx-auto px-4 mb-16 sm:mb-20 text-center">
+            <div class="bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-700 p-8 sm:p-14 rounded-3xl shadow-2xl text-white relative overflow-hidden animate-gradient-x border-2 border-white/30">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
+                <div class="absolute -left-10 -top-10 w-40 h-40 bg-yellow-300/20 rounded-full blur-xl pointer-events-none"></div>
+
+                <h2 class="text-2xl sm:text-4xl font-black font-serif mb-6 tracking-tight flex items-center justify-center gap-2">
+                    <span class="text-amber-300">
+                        <span class="font-sans font-black">4</span><sup class="font-sans font-extrabold text-xs sm:text-xl align-top relative -top-1">th</sup>
+                    </span>
+                    <span class="font-serif">Convocation SMUCT</span>
+                </h2>
+                
+                <a href="#register" class="inline-block bg-white text-slate-900 font-extrabold text-sm sm:text-lg px-8 sm:px-10 py-3.5 sm:py-4 rounded-2xl shadow-2xl hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+                    Register Now <i class="fa-solid fa-graduation-cap ml-2 text-purple-600"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-slate-900 text-slate-400 py-6 sm:py-8 text-center text-[11px] sm:text-xs border-t border-slate-800">
+            <p>&copy; 2026 Shanto-Mariam University of Creative Technology (SMUCT). All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- Mobile Navigation & Interactive Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Medalist Tab Active Toggle
+        const tabs = document.querySelectorAll('.medalist-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => {
+                    t.classList.remove('bg-indigo-600', 'text-white');
+                    t.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+                });
+                tab.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+                tab.classList.add('bg-indigo-600', 'text-white');
+            });
+        });
+    </script>
+</body>
+</html>

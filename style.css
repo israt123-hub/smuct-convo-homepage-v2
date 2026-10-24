@@ -1,0 +1,100 @@
+/* Glassmorphism utilities */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-dark {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Semi-Transparent Dark Glass Panel for Header Hero Card */
+.glass-panel-dark-transparent {
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Gradient Text Helper */
+.gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Custom Scrollbar & Touch Scroll for Workflow Horizontal View */
+.workflow-scroll {
+    -webkit-overflow-scrolling: touch;
+}
+.workflow-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+.workflow-scroll::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 9999px;
+}
+.workflow-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #ec4899, #8b5cf6, #3b82f6);
+    border-radius: 9999px;
+}
+
+/* Glowing Border Animation effect */
+.glow-card {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Enable transform on non-touch screens */
+@media (hover: hover) {
+    .glow-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 30px -10px rgba(99, 102, 241, 0.3);
+    }
+}
+
+/* Multi-Color Travelling Light Beam Border Effect for Colorful Badges */
+.travelling-light-badge {
+    position: relative;
+    display: inline-flex;
+    padding: 3px;
+    border-radius: 9999px;
+    overflow: hidden;
+    filter: drop-shadow(0 0 14px rgba(245, 158, 11, 0.6));
+}
+
+.travelling-light-badge::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent 0deg,
+        transparent 180deg,
+        #ec4899 230deg,
+        #00f0ff 290deg,
+        #f59e0b 360deg
+    );
+    animation: rotateLight 2s linear infinite;
+}
+
+.travelling-light-inner {
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes rotateLight {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
